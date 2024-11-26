@@ -18,6 +18,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  align-items: center;
 }
 
 /* Header */
@@ -145,12 +146,29 @@ section h2 {
 }
 
 /* Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Garante que o rodapé fique no final */
+}
+
+main {
+  flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+}
+
 footer {
   background-color: #333;
   color: white;
   padding: 15px;
   text-align: center;
 }
+
+
 
 /* Ajustes para o formulário */
 form {
@@ -198,5 +216,57 @@ form button:hover {
   form {
     width: 100%;
   }
+}
+
+#localizacao {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#localizacao h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#localizacao p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.mapa iframe {
+  border: 0;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 500px;
+  height: 225px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensagem de confirmação */
+#confirmationMessage {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f5e9; /* Verde claro */
+  color: #2e7d32; /* Verde escuro */
+  border: 1px solid #2e7d32;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none; /* Remove os pontos das listas */
+  padding-left: 0; /* Remove o espaçamento à esquerda da lista */
+}
+
+ul li {
+  text-align: center; /* Garante que os itens da lista estejam centralizados */
 }
 
