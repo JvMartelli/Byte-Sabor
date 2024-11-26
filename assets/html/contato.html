@@ -4,30 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - Byte & Sabor</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <!-- Header -->
+
   <header>
     <div class="container">
-      <!-- Logo -->
+
       <div class="logo">
-        <img src="assets/css/img/logo.png" alt="Logo do Restaurante Byte & Sabor" id="logo">
+        <img src="/assets/img/logo.png" alt="Logo do Restaurante Byte & Sabor" id="logo">
       
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cardapio.html">Cardápio</a></li>
-          <li><a href="sobre.html">Sobre Nós</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/assets/html/cardapio.html">Cardápio</a></li>
+          <li><a href="/assets/html/sobre.html">Sobre Nós</a></li>
+          <li><a href="/assets/html/contato.html">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
   
-
-  <!-- Seção de Contato -->
   <section id="contato">
     <h2>Entre em Contato</h2>
     <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
@@ -44,7 +42,6 @@
       <button type="submit">Enviar</button>
     </form>
   
-    <!-- Mensagem de confirmação -->
     <div id="confirmationMessage" class="hidden">
       Obrigado! Sua mensagem foi enviada com sucesso.
     </div>
@@ -52,29 +49,23 @@
   
   
   <script>
-    // Captura o formulário e o elemento de confirmação
+
     const form = document.getElementById('contactForm');
     const confirmationMessage = document.getElementById('confirmationMessage');
   
-    // Adiciona um ouvinte para o evento de envio do formulário
     form.addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+      event.preventDefault(); 
   
-      // Exibe a mensagem de confirmação
       confirmationMessage.classList.remove('hidden');
   
-      // Limpa os campos do formulário
       form.reset();
   
-      // Opcional: Ocultar a mensagem após alguns segundos
       setTimeout(() => {
         confirmationMessage.classList.add('hidden');
-      }, 5000); // Oculta após 5 segundos
+      }, 5000); 
     });
   </script>
   
-
-  <!-- Rodapé -->
   <footer>
     <div class="container">
       <p>&copy; 2024 Restaurante Byte & Sabor. Todos os direitos reservados.</p>
